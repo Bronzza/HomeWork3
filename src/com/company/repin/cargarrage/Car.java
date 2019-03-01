@@ -82,6 +82,7 @@ public class Car {
     }
 
     public void removeAllPassenger() {
+        System.out.println("All passengers have been removed");
         passengersInside = 0;
     }
 

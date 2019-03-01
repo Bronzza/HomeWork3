@@ -1,6 +1,3 @@
-package com.company.repin;
-
-
 import com.company.repin.cargarrage.ConsoleDialogue;
 
 public class Main {
