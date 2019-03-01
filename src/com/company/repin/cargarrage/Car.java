@@ -170,6 +170,5 @@ public class Car {
     }
 
     // first change for commit to secondBranch
-    //first change for commit to secondBranch
-    //third change for commit to secondBranch
+
 }
