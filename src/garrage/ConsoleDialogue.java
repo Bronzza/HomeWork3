@@ -18,15 +18,12 @@ public class ConsoleDialogue {
                 System.out.println("Modify garrage.Car / Display garrage.Car info / Exit (m/d/e)");
             }
             String answer = scanner.nextLine();
-            switch (answer) {
-                case ("e"):
+            switch (answer.toUpperCase()) {
                 case ("E"):
                     generalDialogue = false;
-                case ("d"):
                 case ("D"):
                     System.out.println(result.toString());
                     break;
-                case ("m"):
                 case ("M"):
                     modifyCarInter(result);
                     break;
@@ -88,39 +85,31 @@ public class ConsoleDialogue {
 
         while (modifyDialogue) {
             answer = scanner.nextLine();
-            switch (answer) {
-                case ("e"):
+            switch (answer.toUpperCase()) {
                 case ("E"):
                     modifyDialogue = false;
                     break;
-                case ("c"):
                 case ("C"):
                     System.out.println("Enter new current speed");
                     car.setCurrentSpeed(new Scanner(System.in).nextInt());
                     break;
-                case ("a"):
                 case ("A"):
                     car.addPassenger();
                     break;
-                case ("r"):
                 case ("R"):
                     car.removePassenger();
                     break;
-                case ("md"):
                 case ("MD"):
                     System.out.println("Enter door index number");
                     doorDialogue(car.getCarDoorIndex(new Scanner(System.in).nextInt()));
                     break;
-                case ("mw"):
                 case ("MW"):
                     System.out.println("Enter wheel index number");
                     wheelDialogue(car.getCarWheelIndex(new Scanner(System.in).nextInt()));
                     break;
-                case ("wr"):
                 case ("WR"):
                     car.removeAllWheels();
                     break;
-                case ("wa"):
                 case ("WA"):
                     System.out.println("Enter number of wheel to add");
                     car.addWheels(new Scanner(System.in).nextInt());
@@ -130,7 +119,7 @@ public class ConsoleDialogue {
                             "\"wa\" or  \"e\"");
                     break;
             }
-            if (modifyDialogue == true) {
+            if (modifyDialogue) {
                 System.out.println("You are in modify menu");
                 System.out.println("Enter please: Change current speed - \"c\"; Add passenger - \"a\"; Remove passenger" +
                         " - \"r\"; Modify door - \"md\"; Modify wheel - \"mw\"; Remove all wheels -  \"wr\";" +
@@ -179,7 +168,7 @@ public class ConsoleDialogue {
                             " Close window  - \"4\"; Info about the door -  \"5\" or  Exit to previous men - \"6\"");
                     break;
             }
-            if (doorModifyDialogue == true) {
+            if (doorModifyDialogue) {
                 System.out.println("You are in DOOR modify menu");
                 System.out.println("Enter please: Open the door - \"1\"; Close the door - \"2\"; Open window  -\"3\";" +
                         " Close window  - \"4\"; Info about the door -  \"5\" or  Exit to previous men - \"6\"");
@@ -200,25 +189,20 @@ public class ConsoleDialogue {
 
         while (wheelModifyDialogue) {
             answer = scanner.nextLine();
-            switch (answer) {
-                case ("x"):
+            switch (answer.toUpperCase()) {
                 case ("X"):
                     wheelModifyDialogue = false;
                     break;
-                case ("s"):
                 case ("S"):
                     wheel.setNewTire();
                     break;
-                case ("e"):
                 case ("E"):
                     System.out.println("Input number between 0 and 100");
                     wheel.changeTireState(new Scanner(System.in).nextInt());
                     break;
-                case ("t"):
                 case ("T"):
                     System.out.println("Tire stait is " + wheel.getTireState() * 100 + "%");
                     break;
-                case ("i"):
                 case ("I"):
                     System.out.println(wheel.toString());
                     break;
@@ -227,7 +211,7 @@ public class ConsoleDialogue {
                             + "tire state, \"i\" - Get info about this wheel  or  \"x\" - Exit to previous menu");
                     break;
             }
-            if (wheelModifyDialogue == true) {
+            if (wheelModifyDialogue) {
                 System.out.println("You are in WHEEL modify menu");
                 System.out.println("Enter please: \"s\"- Set new tire, \"e\" - Erase tire, \"t\" - Get info about " +
                         "tire state, \"i\" - Get info about this wheel  or  \"x\" - Exit to previous menu");
