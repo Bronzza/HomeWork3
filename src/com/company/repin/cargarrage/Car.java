@@ -168,4 +168,7 @@ public class Car {
                 evaluetaMaxSpeed() + "; time till 100 km/h is: " + timeTillHundred + "; Current speed is: "
                 + currentSpeed + " \nMax passengers " + "number is: " + passengersQuantity;
     }
+
+    // first change for commit to secondBranch
+    //first change for commit to secondBranch
 }
